@@ -1,0 +1,8 @@
+/* SPDX-License-Identifier: GPL-2.0+ */
+#ifndef __CONFIG_BL808_M1S_H
+#define __CONFIG_BL808_M1S_H
+
+#define CFG_SYS_SDRAM_BASE	0x50000000
+#define CFG_SYS_BAUDRATE_TABLE	{ 115200, 1000000, 2000000 }
+
+#endif

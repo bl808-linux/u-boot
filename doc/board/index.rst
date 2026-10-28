@@ -21,6 +21,7 @@ Board-specific doc
    atmel/index
    beagle/index
    broadcom/index
+   bouffalolab/index
    bsh/index
    canaan/index
    cloos/index

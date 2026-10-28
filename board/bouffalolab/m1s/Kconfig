@@ -1,0 +1,18 @@
+if TARGET_BL808_M1S
+
+config SYS_BOARD
+	default "m1s"
+
+config SYS_VENDOR
+	default "bouffalolab"
+
+config SYS_CPU
+	default "generic"
+
+config SYS_CONFIG_NAME
+	default "bl808-m1s"
+
+config TEXT_BASE
+	default 0x50000000
+
+endif

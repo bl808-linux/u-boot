@@ -8,6 +8,14 @@ choice
 	prompt "Target select"
 	optional
 
+config TARGET_BL808_M1S
+	bool "Support Sipeed M1s Dock BL808 D0"
+	select GENERIC_RISCV
+	imply OF_HAS_PRIOR_STAGE
+	help
+	  Support for the Sipeed M1s Dock based on the Bouffalo Lab BL808
+	  SoC, running as an S-mode payload on the 64-bit D0 (C906) core.
+
 config TARGET_ANDES_AE350
 	bool "Support Andes ae350"
 
@@ -112,6 +120,7 @@ config SPL_ZERO_MEM_BEFORE_USE
 	  Sifive core devices that uses L2 cache to store SPL.
 
 # board-specific options below
+source "board/bouffalolab/m1s/Kconfig"
 source "board/andestech/ae350/Kconfig"
 source "board/andestech/voyager/Kconfig"
 source "board/aspeed/ibex_ast2700/Kconfig"

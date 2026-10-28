@@ -1,0 +1,36 @@
+.. SPDX-License-Identifier: GPL-2.0+
+
+Sipeed M1s Dock
+===============
+
+BL808 RISC-V SoC
+----------------
+The BL808 is a low-power SoC from Bouffalo Lab with a 64-bit T-Head
+C906 core (D0) and a 32-bit Bouffalo Lab RISC-V core (M0).
+
+Mainline support
+----------------
+The support for following drivers are already enabled:
+
+1. Bouffalo Lab BL808 UART Driver.
+
+Building
+~~~~~~~~
+1. Add the RISC-V toolchain to your PATH.
+2. Setup ARCH & cross compilation environment variable:
+
+.. code-block:: console
+
+   export CROSS_COMPILE=<riscv64 toolchain prefix>
+   cd <U-Boot-dir>
+   make m1s_d0_defconfig
+   make
+
+This will generate u-boot.bin
+
+Booting
+~~~~~~~
+U-Boot runs as an S-mode payload on the D0 core. The preceding D0
+loader initializes the PSRAM, the UART clock and the pinmux, loads
+U-Boot into RAM and provides the control device tree
+(CONFIG_OF_BOARD).
