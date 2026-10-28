@@ -1,0 +1,8 @@
+Sipeed M1s Dock BL808
+M:	Kwanghoon Son <asdfkwang@gmail.com>
+S:	Maintained
+F:	board/bouffalolab/m1s/
+F:	configs/m1s_d0_defconfig
+F:	doc/board/bouffalolab/
+F:	drivers/serial/serial_bflb.c
+F:	include/configs/bl808-m1s.h
